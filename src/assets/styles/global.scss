@@ -1,0 +1,38 @@
+@import './reset.scss';
+@import './element.scss';
+@import './custom.scss';
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/*滚动条整体粗细样式*/
+::-webkit-scrollbar {
+  /*高宽分别对应横竖滚动条的尺寸*/
+  width: 6px;
+  height: 6px;
+}
+
+/*滚动条里面小方块*/
+::-webkit-scrollbar-thumb {
+  display: block !important;
+  cursor: pointer !important;
+  border-radius: 6px !important;
+  background-color: rgba(144, 147, 153, 0.3) !important;
+  transition: 0.3s background-color !important;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
