@@ -9,6 +9,7 @@
       <i-form
         :config="queryFormConfig"
         :model="queryFormData"
+        :buttons="buttons"
       ></i-form>
       <el-button>查询</el-button>
     </div>
@@ -35,6 +36,12 @@
   const queryFormData = reactive({
     name: '1'
   })
+  const buttons = reactive([
+      {
+        label: '查询',
+        type:'primary'
+      }
+    ])
 </script>
 
 <style lang="scss" scoped>

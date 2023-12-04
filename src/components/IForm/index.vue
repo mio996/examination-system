@@ -28,7 +28,7 @@
         >
           <div v-if="e.type === 'text'" class="i-form-item-text">{{ form[e.value] || '-' }}</div>
           <template v-else>
-            <template>
+            <!-- <template> -->
               <component
                 :is="'el-' + formatFormComp(e)"
                 :type="e.type"
@@ -41,7 +41,7 @@
                 @change="handleChange(e.event, e.value, formVal[e.value])"
                 style="width: 100%;"
               ></component>
-            </template>
+            <!-- </template> -->
           </template>
         </el-form-item>
       </el-col>
